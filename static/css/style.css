@@ -1,8 +1,7 @@
-{% load staticfiles %}
-
 body {
     background-image: url("/static/img/archbg.jpg");
     padding: 2em 0 0 4em;
+    font-size: 1.65em;
 }
 
 input {
@@ -11,16 +10,38 @@ input {
 }
 
 button {
-    margin-top: 1.5em;
-    padding: 4em;
+    margin: 1em 1em 0em 0em;
+    padding: .5em 1em;
+    border-radius: 10px;
+    opacity: .75;
 }
 
 h1 {
     font-size: 6em;
-    margin-bottom: 0px;
+    margin-bottom: 0px;  <!-- clearing Boostrap rule -->
 }
 
-.slogan {
-    margin: .5em 0em .5em;
-    font-size: 1.5em;
+h1 .glyphicon-plus {
+    font-size: .8em;
+}
+
+h3 {
+    margin-top: 15px;
+}
+
+.content {
+    width: 90%;
+}
+
+.main {
+    opacity: .75;
+}
+
+.login {
+    padding-top: 2em;
+}
+
+.green {
+    color: #3c763d;
+    opacity: 1;
 }

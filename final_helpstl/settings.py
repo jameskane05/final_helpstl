@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'helpstl',
+    'landing',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,7 +103,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, 'helpstl/templates'),
+    os.path.join(BASE_DIR, 'landing/templates'),
 )
 
 STATICFILES_DIRS = (
