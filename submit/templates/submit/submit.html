@@ -1,0 +1,37 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.4-dist/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script type="text/javascript" src="{% static 'lib/jquery-2.1.4.js' %}"></script>
+    <script type="text/javascript" src="{% static 'lib/bootstrap-3.3.4-dist/js/bootstrap.min.js' %}"></script>
+    <title>I need help</title>
+</head>
+<body>
+   <div class="login">
+        <h4>Login or register</h4>
+        <form action="" method="post">
+            <input autofocus name="username" placeholder="Username"><br />
+            <input name="password" placeholder="Password"><br />
+            <button type="submit">Log in</button><button type="register">Register</button>
+        </form>
+    </div>
+
+    <div class="helpreq">
+        <h4>Tell us what you need</h4>
+        <form action="/submit" method="post">
+            First name: <input name="fname" placeholder="First name"><br />
+            Last name: <input name="lname" placeholder="Last name"><br />
+            Email address: <input name="email" placeholder="Email address"><br />
+            Phone number: <input name="phone" placeholder="Phone number"><br />
+            Date of birth: <input name="dob" placeholder="Date of birth"><br />
+            Help request information: <input name="info" placeholder="Tell us what you need help with"><br />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

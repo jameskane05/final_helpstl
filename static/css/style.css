@@ -34,7 +34,7 @@ h3 {
 }
 
 .main {
-    opacity: .75;
+    opacity: .9;
 }
 
 .login {
@@ -42,6 +42,34 @@ h3 {
 }
 
 .green {
-    color: #3c763d;
-    opacity: 1;
+    color: #67b168;
+}
+
+
+
+
+@media screen and (max-width: 525px) {
+
+    body {
+        padding: 1.5em 0em 0em 3em;
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+}
+
+
+/* Smartphone in portrait mode */
+@media screen and (max-width: 400px) {
+
+    body {
+        padding: 1em 0em 0em 2em;
+    }
+
+    h1 {
+        font-size: 4.75em;
+    }
+
 }
