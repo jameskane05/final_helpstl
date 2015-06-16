@@ -20,5 +20,6 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^submit/', include('submit.urls')),
     url(r'^helpstl/', include('helpstl.urls')),
+    url(r'^login/', include('login.urls')),
     url(r'', include('landing.urls')),
 ]

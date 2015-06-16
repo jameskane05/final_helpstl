@@ -4,14 +4,6 @@ body {
     font-size: 1.65em;
 }
 
-.subbg {
-    background-image: url("/static/img/Gateway_Arch_July_2012.jpg");
-}
-
-.helpstlbg {
-    background-image: url("/static/img/STL_Skyline_2007_crop.jpg");
-}
-
 input {
     margin-top: .5em;
     padding-left: 5px;
@@ -48,7 +40,7 @@ h3 {
 }
 
 .main {
-    opacity: .9;
+    opacity: 1;
 }
 
 .login {
@@ -61,7 +53,7 @@ h3 {
 
 .helpreq {
     margin-top: 2em;
-    width: 600px;
+    width: 560px;
 }
 
 .info {
@@ -76,6 +68,10 @@ h3 {
 
 .sololine {
     margin-top: 1em;
+}
+
+.loginpane {
+    padding-top: 1em;
 }
 
 td {

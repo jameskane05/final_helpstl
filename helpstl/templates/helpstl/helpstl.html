@@ -1,16 +1,24 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.4-dist/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'lib/bootstrap-3.3.4-dist/css/bootstrap-theme.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <script type="text/javascript" src="{% static 'lib/jquery-2.1.4.js' %}"></script>
-    <script type="text/javascript" src="{% static 'lib/bootstrap-3.3.4-dist/js/bootstrap.min.js' %}"></script>
-    <title>HelpStl - I want to help</title>
-</head>
-<body class="helpstlbg">
+{% extends 'landing/index.html' %}
 
-</body>
-</html>
+{% block main %}
+
+    <style>
+
+    body {
+        background-image: url("/static/img/Gateway_Arch_July_2012.jpg");
+    }
+
+    </style>
+
+    {%  for helpreq in helpreqs %}
+            <li class="row" data-task-id="{{ helpreq.id }}">
+                <div class='col-lg-6'>{{ helpreq.headline }}</div>
+                <div class='task-name infoDiv col-lg-6'>
+                    <div class="col-sm-4 date">{{ task.created }}</div>
+                    <div class="col-sm-4 glyphicon glyphicon-trash"></div>
+                    <div class="col-sm-4 glyphicon glyphicon-repeat"></div>
+                </div>
+            </li>
+    {% endfor %}
+
+{% endblock %}
