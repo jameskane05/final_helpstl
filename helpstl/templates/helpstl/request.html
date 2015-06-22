@@ -10,10 +10,11 @@
 
     </style>
 
-    <div class="container">
-        <div class="row">
-
-        </div>
-    </div>
+    <h2>{{ helpreq.headline }}</h2>
+    <h5>Posted on {{ helpreq.date }}</h5>
+    <p>{{ helpreq.geninfo }}</p>
+    <h5>Contact this person:</h5>
+    <p>Phone: {{ helpreq.phone }}</p>
+    <p>Email: {{ helpreq.email }}</p>
 
 {% endblock %}

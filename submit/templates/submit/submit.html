@@ -13,18 +13,20 @@
         <tr>
             <td class="helpreq">
                 <h3>Tell your community what you need</h3>
-                <form action="/submit/" method="post">
+                <form action="/submit/submit" method="post">
                     First name: <input type="text" name="fname" placeholder="First name"><br />
                     Last name: <input type="text" name="lname" placeholder="Last name"><br />
                     Email address: <input type="text" name="email" placeholder="Email address"><br />
                     Phone number: <input type="text" name="phone" placeholder="Phone number"><br />
-                    Date of birth: <input type="text" name="dob" placeholder="Date of birth"><br /><br />
+                    Zip code: <input type="text" name="zip" placeholder="Zip code"><br />
+                    Headline: <input type="text" name="headline" placeholder="The headline"><br /><br />
                     Describe who you are, what you need help with and why:<br />
-                    <input type="text" class="info" name="info"><br />
+                    <textarea class="info" name="geninfo"></textarea><br />
                     <button type="submit">Submit</button>
                 </form>
             </td>
 
+            <!--
             <td class="login">
                 <h3>Login or register (not required)</h3>
                 <form action="" method="post">
@@ -33,6 +35,7 @@
                     <button type="submit">Log in</button><button type="register">Register</button>
                 </form>
             </td>
+            -->
         </tr>
     </table>
 {% endblock %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.db import models
 from datetime import datetime
-from helpstl.models import HelpReq
+from helpstl.models import HelpRequest
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 def subform(request):
     return render(request, "submit/submit.html")
 
-
+@csrf_exempt
 def submit(request):
 
     if request.method == "POST":
@@ -18,12 +18,13 @@ def submit(request):
         lname = request.POST.get('lname', '')
         email = request.POST.get('email', '')
         phone = request.POST.get('phone', '')
-        dob = request.POST.get('dob', '')
+        zip = request.POST.get('zip', '')
         headline = request.POST.get('headline', '')
-        date = models.DateField(default=datetime.now)
         completed = request.POST.get('completed' '')
-        info = request.POST.get('info', '')
+        geninfo = request.POST.get('geninfo', '')
 
-        helpreq = HelpReq.objects.create(fname=fname, lname=lname, email=email, phone=phone, dob=dob, headline=headline, date=date, completed=False, info=info)
+        helpreq = HelpRequest.objects.create(first_name=fname, last_name=lname, email=email, phone=phone, zip=zip, headline=headline, completed=False, geninfo=geninfo)
+        helpreq.save()
 
-        return JsonResponse({'id': helpreq.id}), render(request, "helpstl/request.html")
+        return redirect("../helpstl/request.html?id=" + str(helpreq.id))
+

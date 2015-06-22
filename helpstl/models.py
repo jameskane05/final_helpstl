@@ -1,26 +1,14 @@
 from django.db import models
-from django.contrib.auth.models import User
-from datetime import datetime
+from datetime import *
 
-# # Store additional information related to a user
-class HelpReq(models.Model):
-    fname = models.CharField(max_length=25, default="")
-    lname = models.CharField(max_length=25, default="")
-    email = models.CharField(max_length=254, default="")
-    phone = models.IntegerField(default="")
-    dob = models.DateField(default="")
-    headline = models.CharField(max_length=200)
-    date = models.DateField(default=datetime.now)
+# A model for an individual help request
+class HelpRequest(models.Model):
+    first_name = models.CharField(max_length=32, default="")
+    last_name = models.CharField(max_length=32, default="")
+    email = models.EmailField(max_length=254, default="")
+    phone = models.CharField(max_length=16, default="")
+    zip = models.CharField(max_length=8, default="")
+    headline = models.CharField(max_length=200, default="")
+    date = models.DateTimeField(auto_now_add=True)
     completed = models.BooleanField(default=False)
-    info = models.CharField(max_length=25, default="")
-
-    def __init__(self, fname, lname, email, phone, dob, headline, date, completed, info, id):
-        self.fname = fname
-        self.lname = lname
-        self.email = email
-        self.phone = phone
-        self.dob = dob
-        self.headline = headline
-        self.date = date
-        self.completed = completed
-        self.info = info
+    geninfo = models.CharField(max_length=254, default="")

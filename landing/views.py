@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 def index(request):
     return render(request, "landing/landing.html")
 
+
 def login(request):
 
     if request.method == "POST":

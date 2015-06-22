@@ -9,6 +9,14 @@ input {
     padding-left: 5px;
 }
 
+textarea {
+    padding: 5px;
+}
+
+a {
+    color: darkblue;
+}
+
 a:hover {
     text-decoration: none;
 }

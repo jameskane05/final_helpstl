@@ -10,15 +10,26 @@
 
     </style>
 
-    {%  for helpreq in helpreqs %}
-            <li class="row" data-task-id="{{ helpreq.id }}">
-                <div class='col-lg-6'>{{ helpreq.headline }}</div>
-                <div class='task-name infoDiv col-lg-6'>
-                    <div class="col-sm-4 date">{{ task.created }}</div>
-                    <div class="col-sm-4 glyphicon glyphicon-trash"></div>
-                    <div class="col-sm-4 glyphicon glyphicon-repeat"></div>
-                </div>
-            </li>
-    {% endfor %}
+    <table class="container">
+
+        <div class="row">
+            <h3 class="col-lg-6">Headline</h3>
+            <h3 class="col-lg-3">Date</h3>
+            <h3 class="col-lg-2">Author</h3>
+            <h3 class="col-lg-1">Location</h3>
+        </div>
+
+        {% for helpreq in helpreqs %}
+
+            <div class="row" data-task-id="{{ helpreq.id }}">
+                <h24 class='col-lg-6'><a href="request.html?id={{ helpreq.id }}">{{ helpreq.headline }}</a></h24>
+                <div class="col-lg-3 date">{{ helpreq.date }}</div>
+                <div class="col-lg-2">{{ helpreq.first_name }} {{ helpreq.last_name }}</div>
+                <div class="col-lg-1">{{ helpreq.zip }}</div>
+            </div>
+
+        {% endfor %}
+
+    </table>
 
 {% endblock %}
