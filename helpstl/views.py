@@ -15,3 +15,6 @@ def request(request):
         id = request.GET.get("id")
         helpreq = HelpRequest.objects.get(id=id)
         return render(request, "helpstl/request.html", {'helpreq': helpreq})
+
+def map(request):
+    return render(request, "helpstl/map.html")

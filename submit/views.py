@@ -20,11 +20,11 @@ def submit(request):
         phone = request.POST.get('phone', '')
         zip = request.POST.get('zip', '')
         headline = request.POST.get('headline', '')
+        category = request.POST.get('category','')
         completed = request.POST.get('completed' '')
         geninfo = request.POST.get('geninfo', '')
 
-        helpreq = HelpRequest.objects.create(first_name=fname, last_name=lname, email=email, phone=phone, zip=zip, headline=headline, completed=False, geninfo=geninfo)
+        helpreq = HelpRequest.objects.create(first_name=fname, last_name=lname, email=email, phone=phone, zip=zip, headline=headline, category=category, completed=False, geninfo=geninfo)
         helpreq.save()
 
         return redirect("../helpstl/request.html?id=" + str(helpreq.id))
-

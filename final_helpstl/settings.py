@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'landing',
     'submit',
     'helpstl',
+    'login'
 )
 
 MIDDLEWARE_CLASSES = (

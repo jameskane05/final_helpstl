@@ -5,16 +5,20 @@
     <style>
 
     body {
+        min-height: 1000px;
         background-image: url("/static/img/Gateway_Arch_July_2012.jpg");
-    }
+;    }
 
     </style>
 
     <h2>{{ helpreq.headline }}</h2>
-    <h5>Posted on {{ helpreq.date }}</h5>
+    <h5>Posted on {{ helpreq.date }} by {{ helpreq.first_name }} {{ helpreq.last_name }} in {{ helpreq.category }}</h5>
     <p>{{ helpreq.geninfo }}</p>
-    <h5>Contact this person:</h5>
-    <p>Phone: {{ helpreq.phone }}</p>
-    <p>Email: {{ helpreq.email }}</p>
+
+    <div class="contact">
+        <h5>Contact this person</h5>
+        <p>Phone: {{ helpreq.phone }}</p>
+        <p>Email: <a href="mailto:{{ helpreq.email }}">{{ helpreq.email }}</a></p>
+    </div>
 
 {% endblock %}

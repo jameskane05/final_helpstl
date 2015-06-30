@@ -12,21 +12,21 @@
 
     <table class="container">
 
-        <div class="row">
-            <h3 class="col-lg-6">Headline</h3>
-            <h3 class="col-lg-3">Date</h3>
-            <h3 class="col-lg-2">Author</h3>
-            <h3 class="col-lg-1">Location</h3>
-        </div>
+        <tr class="row">
+            <td class="col-lg-6"><h3>Headline</h3></td>
+            <td class="col-lg-3"><h3>Date</h3></td>
+            <td class="col-lg-2"><h3>Author</h3></td>
+            <td class="col-lg-1"><h3>Location</h3></td>
+        </tr>
 
         {% for helpreq in helpreqs %}
 
-            <div class="row" data-task-id="{{ helpreq.id }}">
-                <h24 class='col-lg-6'><a href="request.html?id={{ helpreq.id }}">{{ helpreq.headline }}</a></h24>
-                <div class="col-lg-3 date">{{ helpreq.date }}</div>
-                <div class="col-lg-2">{{ helpreq.first_name }} {{ helpreq.last_name }}</div>
-                <div class="col-lg-1">{{ helpreq.zip }}</div>
-            </div>
+            <tr class="row" data-task-id="{{ helpreq.id }}">
+                <td class='col-lg-6'><a href="request.html?id={{ helpreq.id }}">{{ helpreq.headline }}</a></td>
+                <td class="col-lg-3 date">{{ helpreq.date }}</div></td>
+                <td class="col-lg-2">{{ helpreq.first_name }} {{ helpreq.last_name }}</div></td>
+                <td class="col-lg-1">{{ helpreq.zip }}</div></td>
+            </tr>
 
         {% endfor %}
 

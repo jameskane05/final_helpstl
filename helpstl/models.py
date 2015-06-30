@@ -9,6 +9,7 @@ class HelpRequest(models.Model):
     phone = models.CharField(max_length=16, default="")
     zip = models.CharField(max_length=8, default="")
     headline = models.CharField(max_length=200, default="")
+    category = models.CharField(max_length=50, default="")
     date = models.DateTimeField(auto_now_add=True)
     completed = models.BooleanField(default=False)
     geninfo = models.CharField(max_length=254, default="")

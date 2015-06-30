@@ -4,9 +4,14 @@ body {
     font-size: 1.65em;
 }
 
-input {
+p {
+    margin-bottom: 0;
+}
+
+input, select {
     margin-top: .5em;
     padding-left: 5px;
+    height: 26px;
 }
 
 textarea {
@@ -47,6 +52,9 @@ h3 {
     width: 90%;
 }
 
+.container {
+    margin-left: 0em;
+}
 .main {
     opacity: 1;
 }
@@ -80,6 +88,35 @@ h3 {
 
 .loginpane {
     padding-top: 1em;
+}
+
+.contact {
+    margin-top: 1em;
+    border-radius: 10px;
+    background-color: white;
+    padding: 1em 1em;
+    width: 300px;
+    opacity: .5;
+}
+
+h5 {
+    margin-top: 0em;
+}
+
+.contact h5, .contact p {
+    opacity: 1;
+}
+
+.contact:last-child {
+    margin-bottom: 0;
+}
+
+.col-lg-6:first-child{
+    padding-left: 0;
+}
+.mission {
+    width:500px;
+    margin-top: 1.25em;
 }
 
 td {

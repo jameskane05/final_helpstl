@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.helpstl, name="helpstl"),
-    url(r'^request.html$', views.request, name="request")
+    url(r'^request.html$', views.request, name="request"),
+    url(r'^map.html$', views.map, name="map")
 ]

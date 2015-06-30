@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends 'landing/index.html' %}
 
-</body>
-</html>
+{% block main %}
+    <table class="subtable">
+        <tr>
+            <td class="helpreq">
+                <form action="/login/register" method="post">
+                    Username: <input type="text" name="fname" placeholder="First name"><br />
+                    First name: <input type="text" name="fname" placeholder="First name"><br />
+                    Last name: <input type="text" name="lname" placeholder="Last name"><br />
+                    Email address: <input type="text" name="email" placeholder="Email address"><br />
+                    Phone number: <input type="text" name="phone" placeholder="Phone number"><br />
+                    Zip code: <input type="text" name="zip" placeholder="Zip code"><br />
+                    <button type="submit">Register</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+{% endblock %}
